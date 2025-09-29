@@ -1,14 +1,14 @@
-import { StrictMode } from 'react'
+import { lazy, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import Body from './components/Body.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Videodetail from './components/Videodetail.jsx'
 import Header from './components/Header.jsx'
-import Headerbody from './components/Headerbody.jsx'
-import Search from './components/Search.jsx'
-import Channel from './components/Channel.jsx'
+
+const Search = lazy(()=>import('./components/Search.jsx'));
+const Headerbody = lazy(()=>import('./components/Headerbody.jsx'));
+const Channel = lazy(()=>import('./components/Channel.jsx'));
+
 
 const ytrouter = createBrowserRouter([
   {

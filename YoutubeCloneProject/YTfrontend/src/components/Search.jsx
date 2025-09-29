@@ -25,6 +25,7 @@ function Search() {
   const navigate = useNavigate();
 
   let [searchQuery, setSearchQuery] = useState(searchText);
+
   const [results, setResults] = useState([]);
 
   const [loading, setLoading] = useState(false);
@@ -39,13 +40,13 @@ function Search() {
     let userid = localStorage.getItem("userid");
 
   let respApi = CallingVideos();
-  let [filterdata,setfilterdata] = useState(respApi);
+  // let [filterdata,setfilterdata] = useState(respApi);
   
-    useEffect(()=>{
-      if(respApi && respApi.length){
-        setfilterdata(respApi)
-      }
-    } , [respApi]);
+  //   useEffect(()=>{
+  //     if(respApi && respApi.length){
+  //       setfilterdata(respApi)
+  //     }
+  //   } , [respApi]);
 
     const apichannels = "http://localhost:8050/channels";
     let [channeldata,setchanneldata] = useState([])
@@ -72,7 +73,6 @@ function Search() {
     function closeModal() {
       setIsVisible(false);
     }
-
 
   async function handleVideoSearch(searchQuery) {
     setsearchBtnClicke(true);

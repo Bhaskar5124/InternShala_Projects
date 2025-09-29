@@ -60,7 +60,7 @@ function Body({filterdata}) {
                 </div>
 
                 <div className="h-26 w-81 pr-2 pl-1 flex flex-col justify-start items-start flex-wrap">
-                  <h1 className="text-left font-semibold">{video.title}</h1>
+                  <h1 className="max-h-13 max-w-76 text-left font-semibold overflow-hidden text-ellipsis whitespace-wrap">{video.title}</h1>
                   <h1 className="font-medium text-sm text-gray-600">{video.channelName}</h1>
                   <h1 className="font-medium text-sm text-gray-600">{formatNumberWithKMB(video.views)} views • {getTimeAgo(video.uploadDate)}</h1>
                 </div>

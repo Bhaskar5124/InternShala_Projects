@@ -175,9 +175,9 @@ function Header() {
       
       <div className={`flex-1 w-full ml-14 ${isSidebarOpen ? 'ml-36 bg-black/30 backdrop-invert backdrop-opacity-8' : 'bg-white'}`}>
         {/* Header */}
-        <header className="h-26 w-full flex items-center justify-between px-0 py-2 bg-white sticky top-0 z-40">
+        <header className="h-26 w-full flex items-end justify-between px-0 py-2 bg-white fixed top-2 left-0 z-40">
           {/* Left: Menu & Logo */}
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full ml-14">
                 <div className="h-14 w-full flex items-center justify-between px-4 py-2 bg-white sticky top-0 z-40">
                       <div className="flex items-center gap-4">
 
