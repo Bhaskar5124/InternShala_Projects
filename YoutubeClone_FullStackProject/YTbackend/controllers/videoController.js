@@ -78,3 +78,18 @@ export async function createVideo(req,res){
         return res.status(500).json({message: err.message})
     }
 }
+
+
+export async function updateVideo(req,res){
+    try{
+        let updateVideoId = req.params.id;
+        let upView = await cart.findByIdAndUpdate(updateVideoId, { $inc: { views: 1 } }, { new: true });
+        return res.status(200).json({
+            message:`Video View updated succesfully with Video Id:${updateVideoId}`,
+            upView
+        });
+    }
+    catch(err){
+        return res.status(500).json({message:err.message});
+    }
+}

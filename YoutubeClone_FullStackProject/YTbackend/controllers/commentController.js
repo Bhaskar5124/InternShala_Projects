@@ -3,7 +3,7 @@ import { MONGODB_URL } from '../config/server.js';
 import comments from "../models/commentSchema.js";
 import users from '../models/userSchema.js';
 
-const mongoUrl = 'mongodb://127.0.0.1:27017/'; 
+const mongoUrl = MONGODB_URL; 
 const dbName = 'youtubeapp'; 
 const collectionName = 'comments'; 
 

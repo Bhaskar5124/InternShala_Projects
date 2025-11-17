@@ -20,7 +20,7 @@ app.listen(PORT, ()=>{
 
 //'youtube' is the name of the database created in mongodb for your app and the IP address refers to your local machine aka your Laptop
 //connect method returns you a promise
-mongoose.connect('mongodb://127.0.0.1:27017/youtubeapp')
+mongoose.connect('mongodb+srv://bhaskarchourasia5124_db_user:JXS25mQgiLuX7b3g@cluster0.pinwotk.mongodb.net/youtubeapp?retryWrites=true&w=majority')
 .then(()=>{
     console.log("DB Connected");
 })

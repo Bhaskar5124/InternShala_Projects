@@ -17,6 +17,7 @@ let userid = localStorage.getItem("userid");
 
 
 let [loginUserComment, setloginUserComment] = useState("");
+let [openVideoId, setOpenVideoId] = useState("");
 
         const apichannels = "http://localhost:8050/channels";
         let [channeldata,setchanneldata] = useState([])
@@ -40,6 +41,30 @@ let [loginUserComment, setloginUserComment] = useState("");
        Calling();
    },[])
  console.log("ClickedVideodata",videodata);
+ 
+
+
+ //To increase view number
+// let vid = videodata.map((v)=>v._id);
+// if(videodata && videodata.length>0){
+//    useEffect(()=>{
+//   async function incrementview(){ 
+//     try{
+//         setOpenVideoId(vid[0]);
+//         let viewResp = await axios.put(`http://localhost:8050/video/:${openVideoId}`);
+//         console.log(viewResp);
+//     }catch(err){
+//       console.log(err);
+//     }
+//   }
+//   if(openVideoId==vid[0]){
+//     incrementview();
+//   }
+//  },[openVideoId])
+// }
+
+
+
 
    const apicomment = "http://localhost:8050/comments";
    let [commentdata,setcommentdata] = useState([])

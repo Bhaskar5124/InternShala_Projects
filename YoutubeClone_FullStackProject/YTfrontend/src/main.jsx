@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Header from './components/Header.jsx'
+import Error from './components/Error.jsx'
 
 const Search = lazy(()=>import('./components/Search.jsx'));
 const Headerbody = lazy(()=>import('./components/Headerbody.jsx'));
@@ -14,7 +15,7 @@ const ytrouter = createBrowserRouter([
   {
     path:"/",
     element:<App/>,
-    //errorElement: <Error/>,
+    errorElement: <Error/>,
     children:[
       {
         path:"/",
